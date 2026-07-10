@@ -1,0 +1,122 @@
+.footer{
+    background:#312E81;
+    color:#fff;
+    padding:70px 80px 25px;
+}
+
+/* ---------- Main Layout ---------- */
+
+.footer-container{
+    display:grid;
+    grid-template-columns:2fr 1fr 1.3fr;
+    gap:60px;
+}
+
+/* ---------- About ---------- */
+
+.footer-about h2{
+    font-size:36px;
+    margin-bottom:18px;
+}
+
+.footer-about p{
+    color:#D1D5DB;
+    line-height:1.9;
+    max-width:420px;
+}
+
+/* ---------- Headings ---------- */
+
+.footer-links h3,
+.footer-contact h3{
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+/* ---------- Quick Links ---------- */
+
+.footer-links ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer-links li{
+    margin-bottom:14px;
+}
+
+.footer-links a{
+    color:#E5E7EB;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#A78BFA;
+}
+
+/* ---------- Contact ---------- */
+
+.footer-contact{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:18px;
+}
+
+.footer-icon{
+    color:#C4B5FD;
+    font-size:20px;
+    width:22px;
+    flex-shrink:0;
+}
+
+.contact-row a,
+.contact-row span{
+    color:#E5E7EB;
+    text-decoration:none;
+    font-size:16px;
+    transition:.3s;
+}
+
+.contact-row a:hover{
+    color:#A78BFA;
+}
+
+/* ---------- Bottom ---------- */
+
+.footer hr{
+    margin:45px 0 20px;
+    border:none;
+    border-top:1px solid rgba(255,255,255,.15);
+}
+
+.footer-bottom{
+    text-align:center;
+    color:#D1D5DB;
+    font-size:15px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:900px){
+
+.footer{
+    padding:50px 25px;
+}
+
+.footer-container{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+.footer-about p{
+    max-width:100%;
+}
+
+}

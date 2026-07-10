@@ -1,0 +1,205 @@
+.cover-page{
+    min-height:100vh;
+    padding:60px 20px;
+    background:linear-gradient(135deg,#F5F3FF,#EEF2FF,#FAF5FF);
+}
+
+.cover-container{
+    max-width:1000px;
+    margin:auto;
+    background:#ffffff;
+    padding:45px;
+    border-radius:22px;
+    box-shadow:0 15px 40px rgba(124,58,237,.15);
+}
+
+.cover-container h1{
+    text-align:center;
+    font-size:42px;
+    color:#312E81;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#6B7280;
+    margin-bottom:40px;
+    font-size:17px;
+}
+
+/* ================= Section ================= */
+
+.section{
+    margin-bottom:40px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+    margin-bottom:25px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    margin-bottom:8px;
+    font-weight:600;
+    color:#374151;
+}
+
+.optional{
+    color:#9CA3AF;
+    font-size:14px;
+    margin-left:5px;
+}
+
+.input-group input,
+textarea{
+    width:100%;
+    padding:14px 16px;
+    border:1px solid #D1D5DB;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+    font-family:inherit;
+}
+
+.input-group input:focus,
+textarea:focus{
+    border-color:#7C3AED;
+    box-shadow:0 0 8px rgba(124,58,237,.2);
+}
+
+textarea{
+    resize:vertical;
+}
+
+/* ================= Button ================= */
+
+.button-area{
+    text-align:center;
+    margin-top:30px;
+}
+
+.generate-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 35px;
+    border:none;
+    border-radius:12px;
+    background:#7C3AED;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.generate-btn:hover{
+    background:#6D28D9;
+    transform:translateY(-2px);
+}
+
+/* ================= Preview ================= */
+
+.preview-card{
+    margin-top:45px;
+    background:#F9FAFB;
+    border-radius:18px;
+    padding:35px;
+}
+
+.preview-card h2{
+    color:#312E81;
+    margin-bottom:25px;
+}
+
+.preview-box{
+    background:white;
+    border:1px solid #E5E7EB;
+    border-radius:12px;
+    padding:25px;
+    line-height:1.8;
+    color:#374151;
+}
+
+.preview-box p{
+    margin-bottom:10px;
+}
+
+/* ================= Bottom Buttons ================= */
+
+.bottom-buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.copy-btn,
+.download-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:14px 30px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.copy-btn{
+    background:white;
+    border:2px solid #7C3AED;
+    color:#7C3AED;
+}
+
+.copy-btn:hover{
+    background:#7C3AED;
+    color:white;
+}
+
+.download-btn{
+    background:#7C3AED;
+    border:none;
+    color:white;
+}
+
+.download-btn:hover{
+    background:#6D28D9;
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:768px){
+
+.cover-container{
+    padding:30px;
+}
+
+.cover-container h1{
+    font-size:34px;
+}
+
+.form-grid{
+    grid-template-columns:1fr;
+}
+
+.bottom-buttons{
+    flex-direction:column;
+}
+
+.copy-btn,
+.download-btn{
+    justify-content:center;
+    width:100%;
+}
+
+}

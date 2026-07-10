@@ -1,0 +1,277 @@
+.review-page{
+    min-height:100vh;
+    padding:60px 20px;
+    background:linear-gradient(135deg,#F5F3FF,#EEF2FF,#FAF5FF);
+}
+
+.review-container{
+    max-width:950px;
+    margin:auto;
+    background:#fff;
+    padding:45px;
+    border-radius:22px;
+    box-shadow:0 15px 40px rgba(124,58,237,.15);
+}
+
+.review-container h1{
+    text-align:center;
+    font-size:44px;
+    color:#312E81;
+    margin-bottom:12px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#6B7280;
+    font-size:17px;
+    margin-bottom:40px;
+    line-height:1.6;
+}
+
+/* ================= Upload Box ================= */
+
+.upload-box{
+    border:2px dashed #C4B5FD;
+    background:#FAF5FF;
+    border-radius:20px;
+    padding:45px;
+    text-align:center;
+}
+
+.upload-icon{
+    font-size:60px;
+    color:#7C3AED;
+    margin-bottom:18px;
+}
+
+.upload-box h2{
+    color:#312E81;
+    margin-bottom:10px;
+}
+
+.upload-box p{
+    color:#6B7280;
+    margin-bottom:20px;
+}
+
+.upload-info{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+    color:#7C3AED;
+    font-weight:600;
+}
+
+.pdf-icon{
+    font-size:22px;
+}
+
+.upload-box input{
+    display:block;
+    margin:20px auto;
+}
+
+.review-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 35px;
+    border:none;
+    border-radius:12px;
+    background:#7C3AED;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.review-btn:hover{
+    background:#6D28D9;
+    transform:translateY(-2px);
+}
+
+/* ================= Score ================= */
+
+.score-card{
+    margin-top:45px;
+    background:#F9FAFB;
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+}
+
+.score-card h2{
+    color:#312E81;
+    margin-bottom:25px;
+}
+
+.score-circle{
+    width:150px;
+    height:150px;
+    margin:auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#7C3AED,#9333EA);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    font-weight:bold;
+    box-shadow:0 10px 30px rgba(124,58,237,.25);
+}
+
+.stars{
+    margin-top:20px;
+    font-size:24px;
+    color:#FBBF24;
+}
+
+.empty-star{
+    color:#D1D5DB;
+}
+
+.score-card h3{
+    margin-top:15px;
+    color:#7C3AED;
+}
+
+.score-card p{
+    margin-top:10px;
+    color:#6B7280;
+}
+
+/* ================= Suggestions ================= */
+
+.review-result{
+    margin-top:45px;
+}
+
+.review-result h2{
+    color:#312E81;
+    margin-bottom:20px;
+}
+
+.suggestion{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    background:#F9FAFB;
+    padding:18px;
+    border-radius:14px;
+    margin-bottom:15px;
+    transition:.3s;
+}
+
+.suggestion:hover{
+    transform:translateX(5px);
+    background:#F3F4F6;
+}
+
+.number{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:#7C3AED;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.check{
+    color:#10B981;
+    margin-top:5px;
+    font-size:18px;
+}
+
+.suggestion p{
+    color:#4B5563;
+    line-height:1.7;
+}
+
+/* ================= Bottom Buttons ================= */
+
+.bottom-buttons{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.download-btn,
+.again-btn{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 30px;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.download-btn{
+    border:none;
+    background:#7C3AED;
+    color:white;
+}
+
+.download-btn:hover{
+    background:#6D28D9;
+}
+
+.again-btn{
+    border:2px solid #7C3AED;
+    background:white;
+    color:#7C3AED;
+}
+
+.again-btn:hover{
+    background:#7C3AED;
+    color:white;
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:768px){
+
+.review-container{
+    padding:30px 20px;
+}
+
+.review-container h1{
+    font-size:34px;
+}
+
+.upload-box{
+    padding:30px 20px;
+}
+
+.score-circle{
+    width:120px;
+    height:120px;
+    font-size:32px;
+}
+
+.bottom-buttons{
+    flex-direction:column;
+}
+
+.download-btn,
+.again-btn{
+    justify-content:center;
+    width:100%;
+}
+
+.suggestion{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+}
