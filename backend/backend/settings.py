@@ -53,10 +53,16 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt.token_blacklist',
     "resumes",
     "ai_review",
+     "corsheaders",
 ]
 
 
 MIDDLEWARE = [
+#  added the 62 and 64 line also 56
+    "corsheaders.middleware.CorsMiddleware",
+ 
+    "django.middleware.security.SecurityMiddleware",
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -90,12 +96,15 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "Resume_builder_db",
+        "USER": "postgres",
+        "PASSWORD": "urmila@123",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
@@ -136,5 +145,13 @@ STATIC_URL = 'static/'
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
+
+    ),
+
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.IsAuthenticated",
     ),
 }
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+]

@@ -1,324 +1,383 @@
-.resume-list-page{
-    min-height:100vh;
-    padding:60px 20px;
-    background:linear-gradient(135deg,#F5F3FF,#EEF2FF,#FAF5FF);
+.resume-list-page {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #F5F3FF, #EEF2FF, #FAF5FF);
 }
 
-.resume-list-container{
-    max-width:1100px;
-    margin:auto;
+.resume-list-container {
+  max-width: 1200px;
+  margin: auto;
 }
 
-.page-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:40px;
+/* ================= Header and Navigation ================= */
+.list-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 100%;
 }
 
-.page-header h1{
-    font-size:42px;
-    color:#312E81;
-    margin-bottom:8px;
+.back-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s;
 }
 
-.page-header p{
-    color:#6B7280;
+.back-link-btn:hover {
+  color: #7c3aed;
 }
 
-.create-btn{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    text-decoration:none;
-    background:#7C3AED;
-    color:white;
-    padding:14px 24px;
-    border-radius:12px;
-    font-weight:600;
-    transition:.3s;
+.create-new-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.25);
+  transition: all 0.3s ease;
 }
 
-.create-btn:hover{
-    background:#6D28D9;
+.create-new-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
 }
 
-/* Resume Card */
-
-.resume-card{
-
-    background:white;
-
-    padding:25px 30px;
-
-    border-radius:18px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    margin-bottom:25px;
-
-    box-shadow:0 10px 30px rgba(124,58,237,.10);
-
-    transition:.3s;
-
+/* ================= Title Section ================= */
+.title-section {
+  text-align: center;
+  margin-bottom: 45px;
 }
 
-.resume-card:hover{
-
-    transform:translateY(-4px);
-
+.title-section h1 {
+  font-size: 38px;
+  color: #312e81;
+  margin-bottom: 12px;
+  font-weight: 700;
 }
 
-.resume-left{
-
-    display:flex;
-
-    gap:18px;
-
-    align-items:center;
-
+.title-section .subtitle {
+  color: #6b7280;
+  font-size: 17px;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
 }
 
-.resume-icon{
-
-    font-size:42px;
-
-    color:#7C3AED;
-
+/* ================= Empty State ================= */
+.empty-state-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.06);
+  border: 1px solid rgba(124, 58, 237, 0.08);
 }
 
-.resume-left h3{
-
-    color:#312E81;
-
-    margin-bottom:6px;
-
+.empty-state-icon {
+  font-size: 70px;
+  color: #7c3aed;
+  margin-bottom: 25px;
+  opacity: 0.85;
 }
 
-.resume-left p{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    color:#6B7280;
-
+.empty-state-card h2 {
+  color: #312e81;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 700;
 }
 
-.resume-right{
-
-    display:flex;
-
-    gap:12px;
-
-    flex-wrap:wrap;
-
+.empty-state-card p {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 15.5px;
 }
 
-.resume-right button{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    border:none;
-
-    padding:11px 18px;
-
-    border-radius:10px;
-
-    cursor:pointer;
-
-    font-weight:600;
-
-    transition:.3s;
-
+.cta-create-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.25);
+  transition: all 0.3s ease;
 }
 
-.view-btn{
-
-    background:#EDE9FE;
-
-    color:#7C3AED;
-
+.cta-create-btn:hover {
+  background-color: #6d28d9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
 }
 
-.edit-btn{
-
-    background:#DBEAFE;
-
-    color:#2563EB;
-
+/* ================= Resumes Grid Layout ================= */
+.resumes-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
 }
 
-.pdf-btn{
-
-    background:#DCFCE7;
-
-    color:#15803D;
-
+.resume-item-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(124, 58, 237, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-.delete-btn{
-
-    background:#FEE2E2;
-
-    color:#DC2626;
-
+.resume-item-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.12);
+  border-color: rgba(124, 58, 237, 0.15);
 }
 
-.view-btn:hover{
-
-    background:#DDD6FE;
-
+/* Document Top Icon decoration */
+.card-top-icon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  background-color: #f5f3ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7c3aed;
+  font-size: 20px;
 }
 
-.edit-btn:hover{
-
-    background:#BFDBFE;
-
+.card-main-content {
+  flex-grow: 1;
 }
 
-.pdf-btn:hover{
-
-    background:#BBF7D0;
-
+.card-main-content h2 {
+  font-size: 22px;
+  color: #111827;
+  margin-bottom: 18px;
+  font-weight: 700;
+  padding-right: 50px; /* Space for the icon */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.delete-btn:hover{
-
-    background:#FECACA;
-
+/* Details list styling */
+.contact-details {
+  margin-bottom: 22px;
 }
 
-/* Empty */
-
-.empty-state{
-
-    margin-top:60px;
-
-    background:white;
-
-    padding:45px;
-
-    border-radius:18px;
-
-    text-align:center;
-
-    box-shadow:0 10px 25px rgba(124,58,237,.10);
-
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  color: #4b5563;
+  font-size: 14.5px;
 }
 
-.empty-icon{
-
-    font-size:55px;
-
-    color:#7C3AED;
-
-    margin-bottom:18px;
-
+.contact-icon {
+  color: #7c3aed;
+  font-size: 14px;
 }
 
-.empty-state h2{
-
-    color:#312E81;
-
-    margin-bottom:10px;
-
+.contact-item span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.empty-state p{
-
-    color:#6B7280;
-
-    margin-bottom:25px;
-
+/* Skills snippet box */
+.skills-summary {
+  background-color: #f9fafb;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 22px;
+  border: 1px solid #f3f4f6;
 }
 
-.empty-btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:10px;
-
-    padding:14px 24px;
-
-    background:#7C3AED;
-
-    color:white;
-
-    text-decoration:none;
-
-    border-radius:10px;
-
-    font-weight:600;
-
+.skills-summary h4 {
+  font-size: 13.5px;
+  color: #374151;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.empty-btn:hover{
-
-    background:#6D28D9;
-
+.skills-summary p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
+  /* Truncation details handling */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* Responsive */
-
-@media(max-width:900px){
-
-.page-header{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:20px;
-
+/* Card Metadata info */
+.card-meta-footer {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 15px;
+  margin-bottom: 20px;
 }
 
-.resume-card{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:20px;
-
+.date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #9ca3af;
+  font-weight: 500;
 }
 
-.resume-right{
-
-width:100%;
-
+/* ================= Actions Layout ================= */
+.card-actions-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
 }
 
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid;
+  padding: 10px 5px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-@media(max-width:600px){
-
-.resume-right{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-width:100%;
-
+/* View (Blue) details */
+.view-details-btn {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
 }
 
-.resume-right button{
-
-justify-content:center;
-
+.view-details-btn:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+  color: white;
 }
 
+/* Edit (Green) details */
+.edit-details-btn {
+  background-color: #f0fdf4;
+  color: #15803d;
+  border-color: #bbf7d0;
+}
+
+.edit-details-btn:hover {
+  background-color: #15803d;
+  border-color: #15803d;
+  color: white;
+}
+
+/* Delete (Red) details */
+.delete-details-btn {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  border-color: #fecaca;
+}
+
+.delete-details-btn:hover {
+  background-color: #b91c1c;
+  border-color: #b91c1c;
+  color: white;
+}
+
+/* ================= Loading spinner layout ================= */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  gap: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #e2e8f0;
+  border-top-color: #7c3aed;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container h2 {
+  font-size: 18px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.error-message {
+  text-align: center;
+  color: #ef4444;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ================= Responsive Layouts ================= */
+@media (max-width: 768px) {
+  .list-header-row {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .create-new-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .resumes-grid-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .title-section h1 {
+    font-size: 32px;
+  }
 }

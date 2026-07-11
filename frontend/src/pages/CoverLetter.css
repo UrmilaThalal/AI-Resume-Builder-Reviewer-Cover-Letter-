@@ -203,3 +203,36 @@ textarea{
 }
 
 }
+
+/* ================= PRINT CSS RULES ================= */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .cover-page {
+    background: white !important;
+    padding: 0 !important;
+  }
+  .cover-container {
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .preview-card {
+    margin-top: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+  .preview-box {
+    border: none !important;
+    padding: 0 !important;
+    line-height: 1.8 !important;
+    font-size: 15px !important;
+  }
+}

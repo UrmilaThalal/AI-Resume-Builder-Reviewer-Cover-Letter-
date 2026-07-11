@@ -295,25 +295,147 @@
 @media(max-width:900px){
 
 .dashboard-grid{
-
 grid-template-columns:1fr;
-
 }
 
 .dashboard-header{
-
 padding:20px;
-
 flex-direction:column;
-
 gap:20px;
-
 }
 
 .welcome h1{
-
 font-size:42px;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
 
 }
 
+@media(max-width:500px){
+.stats-grid {
+  grid-template-columns: 1fr;
+}
+}
+
+/* ================= Stats Grid ================= */
+.stats-grid {
+  width: 90%;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stats-card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.05);
+  border: 1px solid rgba(124, 58, 237, 0.05);
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.12);
+}
+
+.stats-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #7c3aed;
+  margin-bottom: 5px;
+}
+
+.stats-label {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.grid-title {
+  width: 90%;
+  margin: 0 auto 20px;
+  color: #312e81;
+  font-size: 24px;
+}
+
+/* ================= Activity Feed ================= */
+.activity-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.activity-item-card {
+  background: white;
+  padding: 22px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f3f4f6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.activity-item-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(124, 58, 237, 0.2);
+  box-shadow: 0 12px 30px rgba(124, 58, 237, 0.08);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.activity-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-resume {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.badge-ai-review {
+  background: #f5f3ff;
+  color: #6d28d9;
+}
+
+.badge-cover-letter {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.activity-date {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.activity-item-card h3 {
+  font-size: 17px;
+  color: #1f2937;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.activity-item-card p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
 }

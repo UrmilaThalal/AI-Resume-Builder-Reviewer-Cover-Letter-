@@ -8,6 +8,8 @@ import ResumeForm from "./pages/ResumeForm";
 import ResumeList from "./pages/ResumeList";
 import Review from "./pages/Review";
 import CoverLetter from "./pages/CoverLetter";
+import ResumeView from "./pages/ResumeView";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -16,11 +18,62 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/resume-form" element={<ResumeForm />} />
-<Route path="/resume-list" element={<ResumeList />} />
-<Route path="/review" element={<Review />} />
-<Route path="/cover-letter" element={<CoverLetter />} />
+        <Route 
+          path="/dashboard" 
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/resume-form" 
+          element={
+            <ProtectedRoute>
+              <ResumeForm />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/resume-edit/:id" 
+          element={
+            <ProtectedRoute>
+              <ResumeForm />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/resume-view/:id" 
+          element={
+            <ProtectedRoute>
+              <ResumeView />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/resume-list" 
+          element={
+            <ProtectedRoute>
+              <ResumeList />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/review" 
+          element={
+            <ProtectedRoute>
+              <Review />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/cover-letter" 
+          element={
+            <ProtectedRoute>
+              <CoverLetter />
+            </ProtectedRoute>
+          } 
+        />
       </Routes>
     </BrowserRouter>
   );
