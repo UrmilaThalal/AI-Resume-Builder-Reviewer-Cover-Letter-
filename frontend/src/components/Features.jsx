@@ -48,7 +48,7 @@ function Features() {
 
           <p>
             Get intelligent resume suggestions
-            powered by Google Gemini AI.
+            powered by Artificial Intelligence.
           </p>
 
         </div>

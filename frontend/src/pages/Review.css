@@ -457,6 +457,148 @@
   color: #6b7280;
 }
 
+/* ================= Mode Toggle Tabs ================= */
+.mode-toggle-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #eef2ff;
+  padding-bottom: 15px;
+}
+
+.toggle-tab-btn {
+  padding: 10px 24px;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.toggle-tab-btn:hover {
+  color: #7c3aed;
+  background: #f5f3ff;
+}
+
+.toggle-tab-btn.active {
+  background: #7c3aed;
+  color: white;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+}
+
+/* ================= Drag and Drop Zone ================= */
+.drag-drop-zone {
+  border: 2px dashed #c4b5fd;
+  background: #FAF5FF;
+  border-radius: 15px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.drag-drop-zone.dragover {
+  background: #f5f3ff;
+  border-color: #7c3aed;
+  transform: scale(1.02);
+}
+
+.drag-drop-zone.file-selected {
+  border-style: solid;
+  border-color: #10b981;
+  background: #ecfdf5;
+}
+
+.file-input-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #7c3aed;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.file-input-label:hover {
+  background: #6d28d9;
+}
+
+.selected-file-details h3 {
+  color: #065f46;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.selected-filename {
+  font-weight: 600;
+  color: #111827;
+  font-size: 15px;
+  word-break: break-all;
+}
+
+.selected-filesize {
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.action-button-wrapper {
+  margin-top: 30px;
+}
+
+/* Icons */
+.pdf-file-icon { color: #ef4444 !important; }
+.word-file-icon { color: #2563eb !important; }
+.txt-file-icon { color: #4b5563 !important; }
+
+/* ================= Badge Lists ================= */
+.skills-badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.missing-skill-badge {
+  background-color: #fef2f2;
+  color: #b91c1c;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #fca5a5;
+}
+
+.keyword-suggestion-badge {
+  background-color: #fffbeb;
+  color: #b45309;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #fde68a;
+}
+
+.empty-text {
+  color: #9ca3af;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.icon-blue { color: #2563eb; }
+.icon-teal { color: #0d9488; }
+.icon-gold { color: #d97706; }
+
 /* ================= Responsive ================= */
 @media(max-width:768px){
   .review-container{

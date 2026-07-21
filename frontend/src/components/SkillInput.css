@@ -1,0 +1,70 @@
+.skills-tag-input-container {
+  border: 1px solid #D1D5DB;
+  border-radius: 10px;
+  padding: 12px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.skills-tag-input-container:focus-within {
+  border-color: #7C3AED;
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.20);
+}
+
+.skills-tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.skill-tag-badge {
+  background: #f5f3ff;
+  color: #7C3AED;
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remove-tag-btn {
+  background: transparent;
+  border: none;
+  color: #9333EA;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+}
+
+.remove-tag-btn:hover {
+  color: #EF4444;
+}
+
+.tag-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #F3F4F6;
+  padding-top: 10px;
+}
+
+.tag-icon {
+  color: #9CA3AF;
+  font-size: 14px;
+}
+
+.tag-input-wrapper input {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  width: 100%;
+  padding: 6px 0;
+  font-size: 15px;
+  color: #374151;
+}

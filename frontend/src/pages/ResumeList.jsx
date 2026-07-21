@@ -2,6 +2,7 @@ import "./ResumeList.css";
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import api from "../api/axios";
+import toast from "react-hot-toast";
 import {
   FaEye,
   FaEdit,
@@ -48,11 +49,11 @@ function ResumeList() {
 
     try {
       await api.delete(`/resume/${id}/`);
-      alert("Resume Deleted Successfully!");
+      toast.success("Resume Deleted Successfully!");
       fetchResumes();
     } catch (err) {
       console.error("Error deleting resume:", err);
-      alert("Unable to delete resume.");
+      toast.error("Unable to delete resume.");
     }
   };
 

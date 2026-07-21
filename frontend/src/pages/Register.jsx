@@ -1,8 +1,9 @@
 import "./Register.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaUserPlus } from "react-icons/fa";
 import api from "../api/axios";
+import toast from "react-hot-toast";
 
 function Register() {
 
@@ -42,14 +43,14 @@ function Register() {
       !formData.confirmPassword
     ) {
 
-      alert("Please fill all fields.");
+      toast.error("Please fill all fields.");
       return;
 
     }
 
     if (formData.password !== formData.confirmPassword) {
 
-      alert("Passwords do not match.");
+      toast.error("Passwords do not match.");
       return;
 
     }
@@ -67,7 +68,7 @@ function Register() {
 
       });
 
-      alert("Registration Successful!");
+      toast.success("Registration Successful!");
 
       navigate("/login");
 
@@ -75,11 +76,11 @@ function Register() {
 
       if (error.response) {
 
-        alert(JSON.stringify(error.response.data));
+        toast.error(typeof error.response.data === "object" ? JSON.stringify(error.response.data) : error.response.data);
 
       } else {
 
-        alert("Server Error");
+        toast.error("Server Error");
 
       }
 
@@ -97,9 +98,9 @@ function Register() {
 
       <div className="register-card">
 
-        <h1>🤖 AI Resume Builder</h1>
+        <h1><FaUserPlus /> AI Resume Builder</h1>
 
-        <h2>Create Account ✨</h2>
+        <h2>Create Account</h2>
 
         <p>
 

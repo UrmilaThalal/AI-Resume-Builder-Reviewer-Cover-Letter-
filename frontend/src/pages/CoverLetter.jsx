@@ -222,7 +222,7 @@ function CoverLetter() {
                   disabled={loading}
                 >
                   <FaRobot />
-                  {loading ? "Generating with Gemini..." : "Generate Cover Letter"}
+                  {loading ? "Generating with AI..." : "Generate Cover Letter"}
                 </button>
               </div>
             </>

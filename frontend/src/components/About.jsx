@@ -1,4 +1,5 @@
 import "./About.css";
+import { FaRobot } from "react-icons/fa";
 
 function About() {
 
@@ -10,7 +11,7 @@ return(
 
 <div className="circle">
 
-🤖
+<FaRobot style={{ fontSize: "64px", color: "#7C3AED" }} />
 
 </div>
 

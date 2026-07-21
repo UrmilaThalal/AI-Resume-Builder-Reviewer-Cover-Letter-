@@ -1,0 +1,242 @@
+.resume-templates-selector {
+  margin-bottom: 20px;
+}
+
+.resume-templates-selector h2 {
+  font-size: 14px;
+  color: #1e293b;
+  margin-bottom: 10px;
+  font-weight: 700;
+  border-bottom: 1px solid #cbd5e1;
+  padding-bottom: 5px;
+}
+
+.templates-large-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.template-large-card {
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.template-large-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-color: #94a3b8;
+}
+
+.template-large-card.active {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.15);
+}
+
+/* Selected Checkmark Overlay */
+.selected-checkmark-overlay {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 20px;
+  height: 20px;
+  background: #7c3aed;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border: 1.5px solid white;
+}
+
+/* Preview Frame Inside Card */
+.template-preview-frame {
+  height: 100px;
+  background: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.mini-paper {
+  width: 60px;
+  height: 80px;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  padding: 6px;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+}
+
+/* 1. Modern Professional Thumbnail Design */
+.mini-layout-modern {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  height: 100%;
+}
+.mini-name-centered {
+  width: 18px;
+  height: 3px;
+  background: #334155;
+  border-radius: 0.5px;
+}
+.mini-divider {
+  width: 100%;
+  height: 0.5px;
+  background: #cbd5e1;
+}
+.mini-row-long {
+  width: 100%;
+  height: 2px;
+  background: #f1f5f9;
+}
+.mini-row-medium {
+  width: 70%;
+  height: 2px;
+  background: #f1f5f9;
+}
+
+/* 2. Software Engineer Monospace Layout */
+.mini-layout-swe {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  height: 100%;
+}
+.mini-swe-header {
+  width: 15px;
+  height: 3px;
+  background: #222222;
+}
+.mini-prompt-line {
+  font-family: monospace;
+  font-size: 5px;
+  color: #7c3aed;
+  line-height: 1;
+}
+.mini-row-long.swe-code {
+  background: #f8fafc;
+  border-left: 1.5px solid #7c3aed;
+}
+.mini-row-medium.swe-code {
+  background: #f8fafc;
+  border-left: 1.5px solid #7c3aed;
+  width: 60%;
+}
+
+/* 3. Data Analyst Split Layout */
+.mini-layout-analyst {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 4px;
+  height: 100%;
+}
+.mini-sidebar {
+  border-right: 0.5px solid #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.mini-side-header {
+  width: 100%;
+  height: 3px;
+  background: #475569;
+}
+.mini-side-row {
+  width: 80%;
+  height: 1.5px;
+  background: #f1f5f9;
+}
+.mini-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* 4. Graphic Designer Header Banner Layout */
+.mini-layout-designer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  height: 100%;
+}
+.mini-top-accent {
+  width: 100%;
+  height: 6px;
+  background: #111111;
+}
+.mini-design-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* 5. Minimal ATS Standard layout */
+.mini-layout-ats {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+  height: 100%;
+}
+.mini-name-flat {
+  width: 20px;
+  height: 3px;
+  background: #000;
+  align-self: center;
+}
+.mini-divider-thin {
+  width: 100%;
+  height: 0.5px;
+  background: #000;
+}
+
+/* Card details panel */
+.card-info-block {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.card-info-block h3 {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 2px 0;
+}
+
+.card-info-block p {
+  font-size: 9.5px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.3;
+}
+
+@media(max-width: 768px) {
+  .templates-large-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(max-width: 480px) {
+  .templates-large-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

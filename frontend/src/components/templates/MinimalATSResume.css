@@ -1,0 +1,124 @@
+.ats-resume-wrapper {
+  font-family: 'Times New Roman', Times, serif, 'Inter', sans-serif;
+  color: #000000;
+  background: #ffffff;
+  padding: 0;
+}
+
+.ats-resume-header {
+  text-align: center;
+  margin-bottom: 12px;
+  border-bottom: 1.5px solid #000000;
+  padding-bottom: 4px;
+}
+
+.ats-resume-header h1 {
+  font-size: 22px;
+  color: #000000;
+  margin: 0 0 3px 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.ats-resume-contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.ats-resume-contact span {
+  display: inline-block;
+}
+
+.ats-resume-section {
+  margin-bottom: 15px;
+}
+
+.ats-resume-section h2 {
+  font-size: 13px;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+  margin: 0 0 5px 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding-bottom: 1px;
+}
+
+.ats-summary-text {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #000000;
+  margin: 0;
+  text-align: left;
+}
+
+.ats-skills-line {
+  font-size: 12.5px;
+  color: #000000;
+  margin: 0;
+}
+
+.ats-entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ats-entry-item {
+  margin-bottom: 0;
+}
+
+.ats-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12.5px;
+}
+
+.ats-entry-subheader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 1px;
+}
+
+.ats-proj-link {
+  font-size: 12px;
+  color: #000000;
+  font-weight: 600;
+}
+
+.ats-proj-tech {
+  font-size: 12px;
+  margin-bottom: 1px;
+}
+
+.ats-description-text {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #000000;
+  margin: 1px 0 0 0;
+  text-align: left;
+}
+
+.ats-certs-list {
+  margin: 0;
+  padding-left: 15px;
+}
+
+.ats-certs-list li {
+  font-size: 12.5px;
+  margin-bottom: 2px;
+}
+
+.pre-wrap {
+  white-space: pre-line;
+  word-break: normal;
+  overflow-wrap: break-word;
+  text-align: left;
+  line-height: 1.5;
+}

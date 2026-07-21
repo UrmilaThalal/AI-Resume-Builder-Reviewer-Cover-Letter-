@@ -51,10 +51,53 @@ function Dashboard() {
     navigate("/login");
   };
 
+  const templatesList = [
+    {
+      id: "modern",
+      name: "Modern Professional",
+      class: "tpl-modern",
+      themeColor: "#7C3AED",
+      atsFriendly: true,
+      description: "Clean, balanced layout with a professional purple theme. Great for general industries."
+    },
+    {
+      id: "swe",
+      name: "Software Engineer",
+      class: "tpl-swe",
+      themeColor: "#2563EB",
+      atsFriendly: true,
+      description: "Technical blue-themed layout with code-like monospace details, highlighting projects and skills."
+    },
+    {
+      id: "analyst",
+      name: "Data Analyst",
+      class: "tpl-analyst",
+      themeColor: "#0D9488",
+      atsFriendly: true,
+      description: "Analytical layout featuring a structured left-side column for tools, core metrics, and languages."
+    },
+    {
+      id: "designer",
+      name: "Graphic Designer",
+      class: "tpl-designer",
+      themeColor: "#EC4899",
+      atsFriendly: false,
+      description: "Bold, colorful two-column creative structure showing professional experience, profile, and visual flair."
+    },
+    {
+      id: "minimal-ats",
+      name: "Minimal ATS",
+      class: "tpl-minimal-ats",
+      themeColor: "#111827",
+      atsFriendly: true,
+      description: "A clean, basic black-and-white structure with minimal margins optimized for automated tracking."
+    }
+  ];
+
   return (
     <div className="dashboard">
       <header className="dashboard-header">
-        <h2>🤖 AI Resume Builder</h2>
+        <h2><FaRobot /> AI Resume Builder</h2>
         <div className="header-right">
           <div className="user-box">
             <FaUserCircle />
@@ -68,7 +111,7 @@ function Dashboard() {
       </header>
 
       <section className="welcome">
-        <h1>Welcome Back 👋</h1>
+        <h1>Welcome Back</h1>
         <p>Create, manage and review your resume using AI-powered tools.</p>
       </section>
 
@@ -130,6 +173,37 @@ function Dashboard() {
             Open <FaArrowRight />
           </span>
         </Link>
+      </section>
+
+      {/* Resume Templates Section */}
+      <h2 className="grid-title">Resume Templates</h2>
+      <section className="templates-grid">
+        {templatesList.map((tpl) => (
+          <div key={tpl.id} className="template-card-item">
+            <div className={`template-preview-thumbnail ${tpl.class}`}>
+              <div className="mini-paper">
+                <div className="mini-header-block" style={{ backgroundColor: tpl.themeColor }}></div>
+                <div className="mini-content-row"></div>
+                <div className="mini-content-row short"></div>
+                <div className="mini-content-row medium"></div>
+              </div>
+              {tpl.atsFriendly && <span className="ats-badge">ATS-Friendly</span>}
+            </div>
+            <div className="template-card-info">
+              <div className="template-title-bar">
+                <h3>{tpl.name}</h3>
+                <span className="theme-color-dot" style={{ backgroundColor: tpl.themeColor }}></span>
+              </div>
+              <p>{tpl.description}</p>
+              <button
+                className="use-template-btn"
+                onClick={() => navigate(`/resume-form?template=${encodeURIComponent(tpl.name)}`)}
+              >
+                Use Template
+              </button>
+            </div>
+          </div>
+        ))}
       </section>
 
       {/* Activity Timeline */}

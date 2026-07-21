@@ -1,67 +1,28 @@
 *{
-
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
-font-family:"Poppins",sans-serif;
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
 }
 
 html{
-
-scroll-behavior:smooth;
-
+    scroll-behavior:smooth;
 }
 
 body{
-
-background:#F8FAFC;
-
-color:#1F2937;
-
-overflow-x:hidden;
-
+    background:#F8FAFC;
+    color:#1F2937;
 }
 
 section{
-
-padding:100px 80px;
-
+    padding:100px 80px;
 }
 
 button{
-
-cursor:pointer;
-
-font-family:inherit;
-
+    cursor:pointer;
+    font-family:inherit;
 }
 
 a{
-
-text-decoration:none;
-
-color:inherit;
-
-}
-
-img{
-
-max-width:100%;
-
-display:block;
-
-}
-
-button:focus,
-button:active,
-a:focus{
-
-outline:none;
-
-box-shadow:none;
-
+    text-decoration:none;
 }

@@ -22,10 +22,14 @@ class Resume(models.Model):
     skills = models.TextField()
 
     projects = models.TextField(blank=True)
-
     certifications = models.TextField(blank=True)
+    languages = models.TextField(blank=True)
+    awards = models.TextField(blank=True)
+    interests = models.TextField(blank=True)
+    references = models.TextField(blank=True)
 
+    template = models.CharField(max_length=50, default="Modern Professional")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.full_name
+        return self.full_name

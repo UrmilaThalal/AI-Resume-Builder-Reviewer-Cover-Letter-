@@ -2,6 +2,8 @@ import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { HiCpuChip } from "react-icons/hi2";
+import toast from "react-hot-toast";
 import api from "../api/axios";
 
 function Login() {
@@ -43,7 +45,7 @@ function Login() {
 
     ) {
 
-      alert("Please fill all fields.");
+      toast.error("Please fill all fields.");
 
       return;
 
@@ -78,19 +80,17 @@ function Login() {
       );
       localStorage.setItem("username", formData.username);
 
-      alert("Login Successful!");
-
       navigate("/dashboard");
 
     } catch (error) {
 
       if (error.response) {
 
-        alert("Invalid Username or Password");
+        toast.error("Invalid username or password.");
 
       } else {
 
-        alert("Server Error");
+        toast.error("Server error. Please try again later.");
 
       }
 
@@ -108,9 +108,9 @@ function Login() {
 
       <div className="login-card">
 
-        <h1>🤖 AI Resume Builder</h1>
+        <h1><HiCpuChip className="brand-icon" /> AI Resume Builder</h1>
 
-        <h2>Welcome Back 👋</h2>
+        <h2>Welcome Back</h2>
 
         <p>
 
@@ -179,7 +179,7 @@ function Login() {
             </div>
 
           </div>
-                    <button
+          <button
             type="submit"
             className="login-btn"
             disabled={loading}

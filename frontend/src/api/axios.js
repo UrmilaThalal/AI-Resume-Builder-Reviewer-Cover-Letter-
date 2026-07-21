@@ -9,8 +9,18 @@ api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("access");
     if (token) {
-      config.headers.Authorization = `Bearer ${token}`;
+      if (config.headers && config.headers.set) {
+        config.headers.set("Authorization", `Bearer ${token}`);
+      } else {
+        config.headers.Authorization = `Bearer ${token}`;
+      }
     }
+    
+    // Prevent double slashes when baseURL has trailing slash and url has leading slash
+    if (config.url && config.url.startsWith("/")) {
+      config.url = config.url.substring(1);
+    }
+    
     return config;
   },
   (error) => {
