@@ -159,7 +159,7 @@ function DesignerResume({ resume }) {
               <div className="designer-edu-list">
                 {education.map((edu, idx) => (
                   <div key={idx} className="designer-edu-card">
-                    <h4>{edu.degree}</h4>
+                    <h4>{edu.degree || edu.level}</h4>
                     <p>{edu.school_college || edu.school}</p>
                     <span>{edu.graduation_year || edu.year}</span>
                     {edu.gpa && <span className="designer-gpa-pill">GPA: {edu.gpa}</span>}

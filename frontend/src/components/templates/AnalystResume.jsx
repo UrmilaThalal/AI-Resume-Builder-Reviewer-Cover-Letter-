@@ -105,7 +105,7 @@ function AnalystResume({ resume }) {
               {education.map((edu, idx) => (
                 <div key={idx} className="analyst-edu-item">
                   <span className="analyst-edu-year">{edu.graduation_year || edu.year}</span>
-                  <h4>{edu.degree}</h4>
+                  <h4>{edu.degree || edu.level}</h4>
                   <p>{edu.school_college || edu.school}</p>
                   {edu.gpa && <p className="analyst-gpa-text">GPA: {edu.gpa}</p>}
                 </div>

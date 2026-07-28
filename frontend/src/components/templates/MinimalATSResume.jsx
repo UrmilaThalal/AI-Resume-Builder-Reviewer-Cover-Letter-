@@ -122,7 +122,7 @@ function MinimalATSResume({ resume }) {
                   <span>{edu.graduation_year || edu.year}</span>
                 </div>
                 <div className="ats-entry-subheader">
-                  <em>{edu.degree}</em>
+                  <em>{edu.degree || edu.level}</em>
                   {edu.board_university && <span>, {edu.board_university}</span>}
                   {edu.gpa && <span> (GPA: {edu.gpa})</span>}
                 </div>

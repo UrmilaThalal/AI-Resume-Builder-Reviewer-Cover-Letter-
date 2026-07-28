@@ -148,7 +148,7 @@ function SoftwareResume({ resume }) {
               <div key={idx} className="swe-entry-item">
                 <div className="swe-entry-header">
                   <h3>
-                    <span className="swe-role-text">{edu.degree || "Degree"}</span>
+                    <span className="swe-role-text">{edu.degree || edu.level || "Degree"}</span>
                   </h3>
                   <span className="swe-duration-text">{edu.graduation_year || edu.year}</span>
                 </div>

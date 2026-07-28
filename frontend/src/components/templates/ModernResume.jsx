@@ -126,7 +126,7 @@ function ModernResume({ resume }) {
               <div key={idx} className="modern-entry-item">
                 <div className="modern-entry-header">
                   <div>
-                    <h3>{edu.degree || "Degree"}</h3>
+                    <h3>{edu.degree || edu.level || "Degree"}</h3>
                     <h4 className="modern-school-text">{edu.school_college || edu.school}</h4>
                   </div>
                   <span className="modern-duration-text">{edu.graduation_year || edu.year}</span>
