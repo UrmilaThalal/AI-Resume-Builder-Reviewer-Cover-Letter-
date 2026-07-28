@@ -26,7 +26,7 @@ jobs:
           - 5432:5432
 
         options: >-
-          --health-cmd="pg_isready"
+          --health-cmd="pg_isready -U postgres"
           --health-interval=10s
           --health-timeout=5s
           --health-retries=5
@@ -39,18 +39,24 @@ jobs:
       DB_PORT: 5432
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.14"
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           cd backend
           pip install -r requirements.txt
+
+          echo "===== Verify Installed Packages ====="
+          pip show python-docx || true
+          pip show pdfplumber || true
+          pip show PyMuPDF || true
 
       - name: Run migrations
         run: |
